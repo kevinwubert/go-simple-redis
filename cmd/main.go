@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/kevinwubert/go-simple-redis/pkg/redisclient"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	err := redisclient.Main()
+	if err != nil {
+		fmt.Println(err)
+	}
 }
